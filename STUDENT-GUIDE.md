@@ -1,293 +1,411 @@
 # Code Girls United: Advanced+ 2026 — share a change on GitHub
 
 **Project:** Advanced+ 2026
-**GitHub:** [https://github.com/CGUAdvanced/ShareJeremy](https://github.com/CGUAdvanced/ShareJeremy)
 
-You already write Python. Today you practice how a team shares code.
+**This class uses Windows.**
 
-You will install **Visual Studio Code**, connect it to **GitHub**, copy this project onto your computer, **run** it, add your name, **check in** that change, and open a **pull request**. A partner merges your pull request. You download their merge and run the program again.
+You already write a little Python. Today you will put this project on your computer, run last week's practice, add your own name file, and ask a partner to accept the change.
 
-Do the steps in order. Check the box when a step works.
+Do one small step. Then look at the screen. Then do the next step.
+
+The project folder on the website is:
+
+https://github.com/CGUAdvanced/ShareJeremy
 
 ---
 
 ## Who this is for
 
-| If you are | What you do |
-| --- | --- |
-| **13 or older** | Use the GitHub account you already made with your `@codegirlsunited.org` email. If you do not have it yet, stop and tell Jeremy. |
-| **Under 13** | **Stop.** Do not create a GitHub account. Tell Jeremy on Classroom. |
+**You are 13 or older.** Use the GitHub account that goes with your `@codegirlsunited.org` email. If you do not have that account yet, stop and tell Jeremy.
 
-Jeremy will never ask for your password. Do not put a password in Chat, Classroom, or this repo.
+**You are under 13.** Stop. Do not make a GitHub account. Tell Jeremy.
 
----
-
-## The path, in one look
-
-1. Install Git, Python, and Visual Studio Code.
-2. Sign in to GitHub.
-3. Clone the project (this puts it on your computer).
-4. Run `main.py`.
-5. Make a branch and add your name to `CONTRIBUTORS.md`.
-6. Commit (that is the check-in) and push.
-7. Open a pull request.
-8. A partner merges it. You do not merge your own.
-9. Pull the updated project and run it again. Your name should print.
+Jeremy will not ask for your password. Do not type a password in Chat, Classroom, or this project.
 
 ---
 
-## Words
+## Words for today
 
-| Word | What it means here |
-| --- | --- |
-| **Repo** | This project folder, plus the history of every check-in |
-| **Clone** | Download the repo to your computer the first time |
-| **Pull** | Download new check-ins that landed after your clone |
-| **Branch** | Your own side path, so `main` stays stable while you work |
-| **Commit / check in** | Save a checkpoint, with a short message about why |
-| **Push** | Upload your commits to GitHub |
-| **Pull request** | Ask the class to take your branch into `main` |
-| **Merge** | Accept that pull request. A **partner** does this, not you |
+**Repo.** The project folder on GitHub, plus the history of every saved change.
 
-Talk about the work in **Google Chat** with your Code Girls United email. GitHub is for the code and the pull request.
+**Clone.** The first download. The computer copies the project into a folder you can open.
+
+**Branch.** Your own side copy. The class copy is named `main`. Your edit stays on your branch until a partner accepts it.
+
+**Commit.** A check-in. You save a checkpoint and a short note about what changed.
+
+**Push.** Upload your check-in to the GitHub website.
+
+**Pull request.** A page on the website that says, "Please add my change to the class copy."
+
+**Merge.** The click that accepts a pull request. A partner does this. You do not merge your own.
+
+**Pull.** Download the newest class copy after a partner merges.
+
+Talk in Google Chat with your Code Girls United email. Use GitHub for the code.
 
 ---
 
-## 1. Install Git
+## 1. Check Git
 
-Git is the program that check-ins use. Visual Studio Code does not include it.
+You should already have this. If it is missing, do it now.
 
-1. Open [https://git-scm.com/download/win](https://git-scm.com/download/win).
-2. Run the installer. Keep the default options. Leave **Git from the command line and also from 3rd-party software** selected if you see it.
-3. Close any old Terminal window. Open a new **PowerShell** or **Command Prompt** and run:
+Git is the program that stores each check-in.
+
+1. Click the Start button. Type `PowerShell`. Click **Windows PowerShell**.
+2. A window opens. It is blue or black. A cursor blinks at the end of a line.
+3. Click in that window. Type this, then press Enter:
 
 ```text
 git --version
 ```
 
-You want a line that starts with `git version`.
+> You should see one line that starts with `git version`, then numbers. Example: `git version 2.47.1`
 
-**Mac:** install Git from [https://git-scm.com/download/mac](https://git-scm.com/download/mac), then run `git --version` in Terminal.
+If the window says `git` is not recognized, install Git:
 
-If the school computer will not install Git, stop and tell Jeremy in Chat. Say the exact message on the screen.
+1. Open https://git-scm.com/download/win
+2. Run the installer. Keep the choices it suggests.
+3. If you see **Git from the command line and also from 3rd-party software**, leave that choice on.
+4. Close PowerShell. Open it again. Type `git --version` again.
+
+If the school computer blocks the install, stop. In Chat, tell Jeremy the step number and the exact words on the screen.
 
 ---
 
-## 2. Install Python
+## 2. Check Python
 
-1. Open [https://www.python.org/downloads/](https://www.python.org/downloads/) on the computer you will use in class.
-2. Download Python 3 and run the installer.
-3. On the first screen, check **Add python.exe to PATH** if you see that box. Then install.
-4. Close the old terminal. Open a new one and run:
+You should already have this. If it is missing, do it now.
+
+1. In the same PowerShell window, type this and press Enter:
 
 ```text
 py --version
 ```
 
-You want `Python 3` and a version number. If `py` is not found, try `python --version`. On a Mac, try `python3 --version`. Remember which word worked. You will type that same word later.
+> You should see `Python 3` and a version number. Example: `Python 3.12.4`
+
+If the window says `py` is not recognized:
+
+1. Open https://www.python.org/downloads/
+2. Download Python 3. Run the installer.
+3. On the first screen, check the box **Add python.exe to PATH**. Then click **Install Now**.
+4. Close PowerShell. Open it again. Type `py --version` again.
+
+The word you will type later is `py`. This class runs the program with `py main.py`.
 
 ---
 
-## 3. Install Visual Studio Code
+## 3. Check Visual Studio Code
 
-1. Open [https://code.visualstudio.com](https://code.visualstudio.com).
-2. Download the **Windows** installer (Mac: the Mac download). Run it.
-3. Leave **Add to PATH** checked if you see it.
-4. Open **Visual Studio Code**. The icon is blue. The installer name includes the word **Code**.
+You should already have this. If it is missing, do it now.
 
-When it is open:
+Visual Studio Code is the editor. The icon is blue. The name under the icon is **Visual Studio Code** or **Code**.
 
-1. Open **Extensions** (left bar, or `Ctrl+Shift+X`).
-2. Install **Python** (publisher: **Microsoft**).
+1. Click Start. Type `Visual Studio Code`. Click the app.
+2. A big window opens.
+
+> You should see a menu across the top: **File**, **Edit**, **Selection**, **View**, **Go**, **Run**, **Terminal**, **Help**.
+
+If Start cannot find it:
+
+1. Open https://code.visualstudio.com
+2. Download the Windows installer. Run it.
+3. If you see **Add to PATH**, leave it checked.
+4. Open Visual Studio Code. Check the top menu again.
+
+Next, add the Python helper:
+
+1. On the far left, click the icon of four squares. The label is **Extensions**. You can also press `Ctrl+Shift+X`.
+2. A search box opens at the top of that side panel. Type `Python`.
+3. Click the extension named **Python**. Under the name it says **Microsoft**.
+4. Click the blue **Install** button.
+
+> When the install finishes, that button changes. It may say **Uninstall**, or it may become a gear. Either one means Python is installed.
 
 ---
 
 ## 4. Sign in to GitHub
 
-1. In Visual Studio Code, open **Extensions** and install **GitHub Pull Requests** (publisher: **GitHub**).
-2. Click the **Accounts** icon at the bottom of the left side (a person outline).
-3. Choose **Sign in with GitHub**.
-4. A browser page opens. Sign in with your `@codegirlsunited.org` GitHub account.
-5. Approve the access request and return to Visual Studio Code.
+GitHub is the website that holds the class project. This step connects Visual Studio Code to your GitHub account.
 
-You are signed in when the Accounts menu shows your GitHub username.
+1. Press `Ctrl+Shift+P`. A box opens at the top of the window. It says you can type a command.
+2. Type `Sign in to GitHub`.
+3. Click the line **GitHub Pull Requests: Sign in to GitHub**. If you only see **Sign in with GitHub**, click that.
+4. A browser window opens. The address bar shows `github.com`.
 
-Stuck on a captcha, a school filter, or a second-factor code? Tell Jeremy in Chat. Do not make a second account.
+> If you are not signed in yet, you see a GitHub sign-in page. Sign in with the account that uses your `@codegirlsunited.org` email.
+
+5. GitHub asks whether Visual Studio Code may use your account. Click the green **Authorize** button. The words may be **Authorize Visual Studio Code** or **Continue**.
+6. The browser may say you can close the page. Go back to Visual Studio Code.
+7. Look at the bottom of the far left bar. Click the person outline. That is the **Accounts** icon.
+
+> You should see your GitHub username in that menu. That means you are signed in.
+
+A puzzle, a school filter, or a code from email? Tell Jeremy in Chat. Do not make a second account. Do not send a password.
 
 ---
 
-## 5. Clone the project onto your computer
+## 5. Clone the project
 
-**Clone** is the first download. **Pull** comes later, after someone else has merged.
+**Clone** means this: copy the project from GitHub onto your computer for the first time. You choose the folder. Git creates a new folder inside it and fills that folder with the files.
 
-1. Press `Ctrl+Shift+P` (`Cmd+Shift+P` on a Mac). This opens the Command Palette.
-2. Type `Git: Clone` and press Enter.
-3. Paste this URL and press Enter:
+The address you must use is exactly this:
 
 ```text
 https://github.com/CGUAdvanced/ShareJeremy
 ```
 
-4. Choose a folder you can find again, such as `Documents`.
-5. When Visual Studio Code asks if you want to open the cloned repository, click **Open**.
+1. In Visual Studio Code, press `Ctrl+Shift+P` again.
+2. Type `Git: Clone`. Click **Git: Clone**.
+3. A box asks for the URL. Paste the address above. Press Enter.
+4. A Windows folder window opens. It is asking where to put the project. Click **Documents** on the left. Then click **Select as Repository Destination**. The button might say **Select Repository Location**.
 
-You should see these files in the Explorer:
+> Wait. A small note pops up at the bottom right of Visual Studio Code when the copy is done. Click **Open**.
 
-- `README.md`
-- `STUDENT-GUIDE.md`
-- `CONTRIBUTORS.md`
-- `main.py`
+What a finished clone looks like:
 
-The folder on your computer is named `ShareJeremy`. That folder is the Advanced+ 2026 project.
+> The top of the window, or the top of the left file list, says **SHAREJEREMY**. The left list shows `main.py`, a folder named `practice`, a folder named `names`, `README.md`, and `STUDENT-GUIDE.md`.
+
+The folder on the computer is:
+
+```text
+Documents\ShareJeremy
+```
+
+That folder is the Advanced+ 2026 project.
+
+If you still see the welcome screen (a picture, **Start**, and **Clone Git Repository**, and no file names), the folder is not open yet.
+
+1. Click **File**, then **Open Folder**.
+2. Go to **Documents**. Click the folder **ShareJeremy**.
+3. Click **Select Folder**.
+
+> The file names listed above should appear on the left.
 
 ---
 
-## 6. Run the program
+## 6. Run last week's practice, then the name list
 
-1. In Visual Studio Code, choose **Terminal → New Terminal**.
-2. Run the word that worked in step 2:
+1. At the top, click **Terminal**, then **New Terminal**.
+2. A panel opens across the bottom. Click in it. The line you type on should mention `ShareJeremy`.
+3. Type this and press Enter:
+
+```text
+py practice\practice_bank.py
+```
+
+> The first line should look like this: `11 categories, 38 examples.` After that you see questions. The questions change each time you run it. That means last week's code and `questions.json` are on your computer.
+
+4. In the same terminal, type this and press Enter:
 
 ```text
 py main.py
 ```
 
-Use `python main.py` or `python3 main.py` if that is the word that printed a Python 3 version.
+> You should see these lines:
+>
+> ```text
+> Code Girls United — Advanced+ 2026
+> People on this project:
+> - J-Ashby — code
+> 1 contributor(s)
+> ```
 
-You should see J-Ashby's name and a count:
+If it says `py` is not recognized, go back to step 2. Then click **Terminal → New Terminal** and try again.
+
+Leave `practice_bank.py`, `questions.json`, and `main.py` as they are. Today your change is a new file with your name. Do not edit someone else's file.
+
+---
+
+## 7. Make a branch
+
+A **branch** is your side copy, with its own name. The class copy stays on `main` until a partner accepts your work.
+
+Look at the blue bar along the bottom of Visual Studio Code. On the left end of that bar, you should see a small branch mark and the word `main`.
+
+1. Click the word `main` in that blue bar.
+2. A list opens at the top. Click **Create new branch...**
+3. Type a branch name. Use your first name in lowercase, with hyphens. Examples: `add-name-maya` or `add-name-jordan`.
+4. Press Enter.
+
+> The blue bar now shows your branch name. It should no longer say `main`.
+
+If it still says `main`, click that word again and click your new branch name before you type your name into the file.
+
+---
+
+## 8. Make your own name file
+
+If the whole class types into one file, Git gets stuck. Two people changed the same lines. Git calls that a **conflict**. It does not know whose lines to keep. That is code contention. A shared list is the worst case, because every pull request touches the same file.
+
+Your own new file does not touch anyone else's file. The pull requests can merge without a fight.
+
+1. On the left, click the `names` folder so it opens.
+2. You should see `j-ashby.txt`. Do not open it to edit it. That file is the example.
+3. Click **File**, then **New Text File**.
+4. Type two lines. Line 1 is your name. Line 2 is the part you want to work on. Use one of these words: `questions`, `front end`, `code`, or `docs`.
 
 ```text
-Code Girls United — Advanced+ 2026
-People on this project:
-- J-Ashby
-1 contributor(s)
+Maya R
+questions
 ```
 
-Leave `main.py` as it is today. Your change is your name on the list, not a rewrite of the program.
+Use your first name and last initial, or your GitHub username. One person only. Do not type an email, a phone number, or a home address.
+
+5. Press `Ctrl+S`. A save window opens. On the left, open your project folder, then the `names` folder.
+6. In the file name box, type your name in lowercase with a hyphen, then `.txt`. Example: `maya-r.txt`. Click **Save**.
+
+> On the left, under `names`, you should see your new file and `j-ashby.txt`.
+
+Do not delete `j-ashby.txt`. Do not change another girl's file. Do not add your name inside someone else's file.
 
 ---
 
-## 7. Make a branch and add your name
+## 9. Check in the change
 
-A **branch** keeps your edit off `main` until a partner accepts it.
+**Commit** means check in. Visual Studio Code saves a checkpoint of your file and keeps the note you type.
 
-1. Click the branch name in the **bottom-left** status bar. It says `main`.
-2. Choose **Create new branch…**
-3. Name it with your first name, lowercase, and hyphens. Examples: `add-name-maya`, `add-name-jordan-t`.
-4. Press Enter. The status bar should now show your branch name.
+1. On the far left, click the **Source Control** icon. It looks like a small branch: a circle with lines. It sits under the files icon. You can also press `Ctrl+Shift+G`.
+2. The side panel changes.
 
-Then edit the list:
+> You should see a heading **Changes**. Under it is your new file, such as `names/maya-r.txt`.
 
-1. Open `CONTRIBUTORS.md`.
-2. Go to the bottom of the **Names** list.
-3. Add **one** new line, in the same shape as the line that is already there:
+3. Move the mouse onto your file. Click the **+** that appears. The file moves under a heading **Staged Changes**. Staged means "include this file in the check-in."
+4. Click the box at the top of that panel. The hint in the box says **Message**. Type a note like this, with your own name:
 
 ```text
-- Maya R
+Add Maya R to the Advanced+ 2026 name list
 ```
 
-Use your real first name and last initial, or your GitHub username. No email. No phone. No home address.
+5. Click the blue **Commit** button.
 
-4. Save the file (`Ctrl+S`).
+> The **Changes** list becomes empty, or a note says there is nothing left to commit. The checkpoint is now on your computer. It is not on the website yet.
 
-Do not delete `- J-Ashby`. Do not change anyone else's line. Do not add a second person on your pull request.
-
----
-
-## 8. Check in the change and push it
-
-**Check in** means **commit**: a saved checkpoint with a message.
-
-1. Click the **Source Control** icon on the left (it looks like a branch). Or press `Ctrl+Shift+G`.
-2. `CONTRIBUTORS.md` should appear under **Changes**.
-3. Click the **+** next to that file. It moves to **Staged Changes**.
-4. In the message box, write what you did and why. Example:
-
-```text
-Add Maya R to the Advanced+ 2026 contributors list
-```
-
-5. Click **Commit**.
-6. Click **Publish Branch** or **Push**. Use your GitHub account if a browser window asks you to sign in. This is the same account as step 4.
-
-The check-in is on GitHub when your branch shows on the website. Open [https://github.com/CGUAdvanced/ShareJeremy](https://github.com/CGUAdvanced/ShareJeremy) and look for your branch.
-
-If Git says it needs your name or email before the first commit, tell Jeremy. Use the email on your GitHub account. Do not invent one.
+If a message says Git needs your name or email before the first commit, stop and tell Jeremy. Use the email on your GitHub account. Do not invent an email.
 
 ---
 
-## 9. Open a pull request
+## 10. Push the branch
 
-A pull request asks the class to take your branch into `main`.
+**Push** means upload. Your branch leaves your computer and shows up on the GitHub website.
 
-1. On the GitHub website, open the project.
-2. If you see a yellow banner that says **Compare & pull request**, click it.
-3. If you do not see that banner: open the **Pull requests** tab → **New pull request**. Set **base: main** and **compare: your branch**.
-4. Title: `Add Maya R to contributors` (use your own name).
-5. In the comment box, write one or two sentences. What you changed, and that you want it on `main`.
-6. Click **Create pull request**.
-7. Copy the pull request link into Google Chat and tag your partner.
+1. Stay in the Source Control panel.
+2. Click **Publish Branch**. The first time, that is the button you want. If you only see **Push**, click **Push**.
+3. If a browser or a small window asks you to sign in, use the same `@codegirlsunited.org` GitHub account.
 
-**Stop.** Do not click **Merge**.
+Now check the website with your eyes:
 
----
+1. Open the browser. Go to https://github.com/CGUAdvanced/ShareJeremy
+2. You should see the name **ShareJeremy** and a green **Code** button.
+3. Find the branch button near the top left of the file list. It says **main** and has a branch mark.
+4. Click it. A list of branch names opens. Click your branch, such as `add-name-maya`.
 
-## 10. A partner merges your pull request
+> The file list reloads. Click the `names` folder, then your file. You should see your two lines on the website.
 
-Trade links with one other girl. You merge **her** pull request. She merges **yours**.
-
-On **her** pull request:
-
-1. Open the link she posted.
-2. Open the **Files changed** tab.
-3. Check all of these before you merge:
-   - The only file is `CONTRIBUTORS.md`
-   - She added one line, at the bottom
-   - Nobody else's name was deleted
-   - The line has no email, phone number, or address
-4. If that is all true: open **Conversation** → **Merge pull request** → **Confirm merge**.
-5. Reply in Chat: `Merged` and her link.
-
-If the page says there are **conflicts**, do not guess and do not delete her name. Tell her and Jeremy. She updates her branch so **both** names stay, pushes again, and then you merge.
-
-If something else looks wrong, do not merge. Write what you saw in Chat and wait for Jeremy.
+If your branch is not in that list, the push did not finish. Tell Jeremy the words Visual Studio Code showed.
 
 ---
 
-## 11. Pull and run again
+## 11. Open a pull request on the website
 
-After your partner says `Merged`:
+A **pull request** asks the class to take your branch into `main`. You make it on the GitHub website.
 
-1. In Visual Studio Code, click your branch name in the bottom-left status bar.
-2. Choose `main`.
-3. Open the Terminal and run:
+1. Stay on https://github.com/CGUAdvanced/ShareJeremy
+2. Look just under the top of the page. If you see a yellow bar that says **your branch had recent pushes** and a green button **Compare & pull request**, click that green button. Then skip to step 7.
+3. If you do not see that yellow bar, click the **Pull requests** tab. It sits in the row with **Code**.
+4. Click the green **New pull request** button.
+5. Two menus appear. **base** must be `main`. **compare** must be your branch name.
+6. If **compare** says `main`, click it and choose your branch. Then click **Create pull request**.
+7. A form opens. Click the **title** box. Type `Add Maya R`, with your own name.
+8. Click the big comment box. Write one or two sentences. Say that you added your own name file, and that you want it on `main`.
+9. Click the green **Create pull request** button.
+
+> The page changes. Your title is at the top. A label says **Open**. The address in the browser bar is the link to your pull request.
+
+10. Copy that address. Paste it in Google Chat for your partner, so she can open it. Do not message Jeremy yet. He wants the Chat message after the code is merged.
+
+Stop here on your own pull request. Do not click **Merge pull request**.
+
+---
+
+## 12. A partner merges it
+
+Trade links with one other girl. You merge her pull request. She merges yours.
+
+On her page:
+
+1. Open the link she posted in Chat.
+2. Click the **Files changed** tab. It is near the top of her pull request.
+3. Read the green and red lines. Check every item:
+   - The only new file is one file inside `names`, such as `names/maya-r.txt`
+   - The file has her name, then one lane: `questions`, `front end`, `code`, or `docs`
+   - She did not delete another girl's file
+   - The file has no email, no phone number, and no home address
+4. If every item is true, click the **Conversation** tab.
+5. Click the green **Merge pull request** button.
+6. A second button appears. Click **Confirm merge**.
+
+> You should see a box that says the pull request is merged. It is often purple.
+
+7. Open Google Chat. Sign in with your `@codegirlsunited.org` email. Open the class space Jeremy already gave you. If you cannot see it, reply on Classroom. Do not make a new space.
+8. Message Jeremy there. Paste the pull request link. Say whose code you merged. Example: `Merged Maya's pull request` and the link.
+
+That Chat message happens after the merge. Opening the pull request is not the message.
+
+If the page says there are conflicts, stop. Do not delete her file. Message Jeremy in Google Chat and say the step number. Do not guess.
+
+If something else looks wrong, do not merge. Write what you saw in Chat. Wait for Jeremy.
+
+---
+
+## 13. Pull, then run it again
+
+Wait until your partner says `Merged`.
+
+1. In Visual Studio Code, click your branch name in the blue bar at the bottom.
+2. Click `main` in the list.
+
+> The blue bar now says `main`.
+
+3. Click **Terminal**, then **New Terminal**, if the bottom panel is closed.
+4. Type this and press Enter:
 
 ```text
 git pull
 ```
 
-4. Open `CONTRIBUTORS.md`. Your line should be there, and so should your partner's line if her pull request was merged too.
-5. Run the program again:
+> You should see `Updating` or `Already up to date`. You should not see a red error.
+
+5. Click the `names` folder. Your file should be there. Your partner's file should be there too if her pull request was merged.
+6. Click in the terminal. Type this and press Enter:
 
 ```text
 py main.py
 ```
 
-The count should be higher than 1, and the new names should print.
+> You should see `Code Girls United — Advanced+ 2026`, then each name and lane, then a count. The count should be higher than 1.
 
-That is the whole loop: clone, run, branch, check in, pull request, someone else merges, pull, run.
+7. You can run the practice again:
+
+```text
+py practice\practice_bank.py
+```
+
+That is the whole loop. Clone. Run the practice. Make a branch. Add your own file. Check in. Push. Open a pull request. A partner merges and messages Jeremy in Google Chat. Pull. Run again.
 
 ---
 
 ## If you get stuck
 
-Copy the **exact** error into Google Chat to Jeremy. Also say which step number you are on.
+Copy the exact words from the screen into Google Chat. Tell Jeremy the step number.
 
-Useful things to try once:
+Try these once:
 
-- Close the terminal, open a new one, and run the command again.
-- Save `CONTRIBUTORS.md` before you commit.
-- Make sure the status bar shows **your** branch, not `main`, before you commit your name.
-- If push is rejected because `main` moved, run `git pull`, keep **every** name in `CONTRIBUTORS.md`, commit, and push again.
+- Close the terminal panel. Open a new terminal. Type the command again.
+- Press `Ctrl+S` on your name file before you commit.
+- Look at the blue bar. It must show your branch name, not `main`, before you commit your file.
+- If push says it was rejected, stop and tell Jeremy in Google Chat. Do not delete a file to force it through.
 
 Do not post a password. Do not zip the folder and email it. Do not make a second GitHub account.
 
@@ -295,13 +413,18 @@ Do not post a password. Do not zip the folder and email it. Do not make a second
 
 ## Done when
 
-- [ ] `git --version` prints a version
-- [ ] `py --version` (or `python --version`) prints Python 3
-- [ ] Visual Studio Code is signed in to your GitHub account
-- [ ] You cloned `https://github.com/CGUAdvanced/ShareJeremy`
-- [ ] `py main.py` printed the contributor list **before** you edited
-- [ ] Your name is one new line at the bottom of `CONTRIBUTORS.md`
-- [ ] You committed on a branch and pushed that branch
-- [ ] You opened a pull request and did **not** merge it yourself
-- [ ] You merged a partner's pull request after you read the file change
-- [ ] On `main`, `git pull` then `py main.py` shows the merged names
+- [ ] `git --version` printed a version
+- [ ] `py --version` printed Python 3
+- [ ] The Accounts icon shows your GitHub username
+- [ ] The folder `Documents\ShareJeremy` is open, and you can see `main.py` and the `practice` folder
+- [ ] `py practice\practice_bank.py` printed categories and questions
+- [ ] `py main.py` printed J-Ashby before you added a file
+- [ ] You added your own file in `names`, such as `names/maya-r.txt`
+- [ ] The file has no email, phone number, or home address
+- [ ] You committed on your branch and pushed that branch
+- [ ] You opened a pull request and did not merge it yourself
+- [ ] You merged a partner's pull request after you read **Files changed**
+- [ ] After that merge, you messaged Jeremy in Google Chat with the link
+- [ ] On `main`, `git pull` and then `py main.py` show the merged names
+
+Code Girls United · https://codegirlsunited.org

@@ -1,28 +1,30 @@
 # Code Girls United — Advanced+ 2026
 
-This is the class project for **Advanced+ 2026**. We share it on GitHub, change it on our own computers, and bring changes back with a pull request.
+This is the class project for **Advanced+ 2026**. The steps for class are in [STUDENT-GUIDE.md](STUDENT-GUIDE.md). The same steps are in `Advanced-Plus-2026-Student-Guide.pdf` for Google Classroom.
 
-The program is one Python file. It reads `CONTRIBUTORS.md` and prints the names.
+This class uses Windows.
 
-**Girls:** follow [STUDENT-GUIDE.md](STUDENT-GUIDE.md) from the top. Do that before you edit anything.
+**Run last week's practice** (the code and the questions):
 
-**Run it** (after you open this folder in Visual Studio Code):
+```text
+py practice\practice_bank.py
+```
+
+The first line should say how many categories and examples are in `practice\questions.json`.
+
+**Run the name list:**
 
 ```text
 py main.py
 ```
 
-If `py` is not found, try `python main.py`. On a Mac, try `python3 main.py`.
-
-You should see:
+Each girl adds her own file in `names\`. She does not edit a shared list. That keeps pull requests from colliding.
 
 ```text
 Code Girls United — Advanced+ 2026
 People on this project:
-- J-Ashby
+- J-Ashby — code
 1 contributor(s)
 ```
-
-After your pull request is merged, pull the latest copy and run it again. Your name should be on the list.
 
 Code Girls United · [codegirlsunited.org](https://codegirlsunited.org)

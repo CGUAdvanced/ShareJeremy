@@ -1,0 +1,748 @@
+{
+  "bank_version": 1,
+  "title": "Code Girls United practice bank",
+  "about": "One file for the whole bank. Question group: copy an example, change it, update answers. Code group: new question types go in practice_bank.py. Do not split into one file per category yet. Search for a category id, such as \"for-range\", to jump there.",
+  "categories": [
+    {
+      "id": "variables",
+      "title": "Variables",
+      "pattern": "assign_and_print",
+      "blurb": "A variable is a name that holds a value. print uses the name, and the output is the value.",
+      "closing": "Run Math when you are ready, or run this cell again for a different example.",
+      "prompts": {
+        "name": "What should this variable be named, based on this code?",
+        "value": "What value should we have set it to?",
+        "print_with": "What should I use here if I want to print this value?",
+        "output": "What is the expected output of this print?"
+      },
+      "hints": {
+        "name": "The variable is the name on the left of =. The value is on the right.",
+        "value": "Read the right side of =. Quote marks are not part of the value.",
+        "print_with": "Use the name. print looks up the name and shows the value. Do not put quotes around the name.",
+        "output": "print shows the value. It does not show the variable's name, and it does not show quote marks."
+      },
+      "notes": {
+        "name": "= stores the value on the right inside the name on the left.",
+        "value": "That is what the variable holds after this line.",
+        "print_with": "Writing the value by hand skips the variable. Quotes around the name print the name itself.",
+        "output": "Quote marks in the code make text. They are not printed."
+      },
+      "examples": [
+        {
+          "id": "age-14",
+          "name": "age",
+          "value": 14,
+          "answers": {
+            "name": "age",
+            "value": "14",
+            "print_with": "age",
+            "output": "14"
+          }
+        },
+        {
+          "id": "name-maya",
+          "name": "name",
+          "value": "Maya",
+          "answers": {
+            "name": "name",
+            "value": "Maya",
+            "print_with": "name",
+            "output": "Maya"
+          }
+        },
+        {
+          "id": "score-10",
+          "name": "score",
+          "value": 10,
+          "answers": {
+            "name": "score",
+            "value": "10",
+            "print_with": "score",
+            "output": "10"
+          }
+        },
+        {
+          "id": "points-0",
+          "name": "points",
+          "value": 0,
+          "answers": {
+            "name": "points",
+            "value": "0",
+            "print_with": "points",
+            "output": "0"
+          }
+        },
+        {
+          "id": "city-kalispell",
+          "name": "city",
+          "value": "Kalispell",
+          "answers": {
+            "name": "city",
+            "value": "Kalispell",
+            "print_with": "city",
+            "output": "Kalispell"
+          }
+        }
+      ]
+    },
+    {
+      "id": "math",
+      "title": "Math",
+      "pattern": "one_update",
+      "blurb": "A second line can change what the variable holds. The symbol says how.",
+      "closing": "Run Loops: for item in list when you are ready, or run this cell again for a different example.",
+      "prompts": {
+        "value": "What is the value of the variable after the second line?",
+        "op": "What does the operator in the second line do?"
+      },
+      "hints": {
+        "value": "Start at the first number. Apply the operator once.",
+        "op": "Look at the symbol between the name and the number on the second line."
+      },
+      "notes": {
+        "value": "The second line stores the new number back into the same variable.",
+        "op": "The operator changes the current value, then the result is stored back."
+      },
+      "examples": [
+        {
+          "id": "points-plus-3",
+          "name": "points",
+          "start": 4,
+          "op": "+",
+          "amount": 3,
+          "answers": {
+            "value": "7",
+            "op": "adds"
+          }
+        },
+        {
+          "id": "points-times-2",
+          "name": "points",
+          "start": 4,
+          "op": "*",
+          "amount": 2,
+          "answers": {
+            "value": "8",
+            "op": "multiplies"
+          }
+        },
+        {
+          "id": "points-minus-2",
+          "name": "points",
+          "start": 10,
+          "op": "-",
+          "amount": 2,
+          "answers": {
+            "value": "8",
+            "op": "subtracts"
+          }
+        },
+        {
+          "id": "left-remainder",
+          "name": "left",
+          "start": 7,
+          "op": "%",
+          "amount": 2,
+          "answers": {
+            "value": "1",
+            "op": "remainder"
+          }
+        },
+        {
+          "id": "pieces-whole-divide",
+          "name": "pieces",
+          "start": 7,
+          "op": "//",
+          "amount": 2,
+          "answers": {
+            "value": "3",
+            "op": "whole-number divide"
+          }
+        }
+      ]
+    },
+    {
+      "id": "for-list",
+      "title": "Loops: for item in list",
+      "pattern": "for_list",
+      "blurb": "A for loop over a list runs the indented lines once per item.",
+      "closing": "Run the index loop when you are ready, or run this cell again for a different example.",
+      "prompts": {
+        "iterations": "How many times does the indented line run?",
+        "last": "What is the last line this prints?"
+      },
+      "hints": {
+        "iterations": "One pass per item. Count the items.",
+        "last": "The loop reaches the last item in the list and prints it."
+      },
+      "notes": {
+        "iterations": "The header says for each item. The print is indented, so it repeats.",
+        "last": "Each pass holds one item. The last pass holds the last item."
+      },
+      "fixed": {
+        "meaning": {
+          "prompt": "What does for item in list do?",
+          "answer": "One pass for each item in the list",
+          "decoys": [
+            "Starts at 0 and stops before stop",
+            "Repeats while a test stays true"
+          ],
+          "hint": "Read the header. It names a list, not a range and not a while test.",
+          "note": "The variable after for holds one item each pass, then the next item."
+        }
+      },
+      "examples": [
+        {
+          "id": "scores-2-4-6",
+          "list_name": "scores",
+          "var": "score",
+          "items": [2, 4, 6],
+          "answers": {
+            "iterations": "3",
+            "last": "6"
+          }
+        },
+        {
+          "id": "scores-2-2-2",
+          "list_name": "scores",
+          "var": "score",
+          "items": [2, 2, 2],
+          "answers": {
+            "iterations": "3",
+            "last": "2"
+          }
+        },
+        {
+          "id": "names-three",
+          "list_name": "names",
+          "var": "name",
+          "items": ["Maya", "Zara", "Lina"],
+          "answers": {
+            "iterations": "3",
+            "last": "Lina"
+          }
+        }
+      ]
+    },
+    {
+      "id": "for-index",
+      "title": "Loops: index with range(len)",
+      "pattern": "for_index",
+      "blurb": "range(len(...)) walks the indexes 0, 1, 2, and so on, so you can read list[i].",
+      "closing": "Run range(stop) when you are ready, or run this cell again for a different example.",
+      "prompts": {
+        "iterations": "How many times does the indented line run?",
+        "last": "What is the last line this prints?"
+      },
+      "hints": {
+        "iterations": "len(the list) is how many indexes there are. Indexes start at 0.",
+        "last": "The last index is one less than the length. The item at that index is last."
+      },
+      "notes": {
+        "iterations": "range(len(...)) walks every index once.",
+        "last": "The first number on the line is the index. The second is the item at that index."
+      },
+      "fixed": {
+        "meaning": {
+          "prompt": "What does range(len(...)) walk?",
+          "answer": "Indexes from 0, one per item",
+          "decoys": [
+            "The items, with no index",
+            "Indexes that start at 1"
+          ],
+          "hint": "len gives the length. range of that length starts at 0.",
+          "note": "list[i] is the item at that index. enumerate is the short form of this loop."
+        }
+      },
+      "examples": [
+        {
+          "id": "index-scores",
+          "list_name": "scores",
+          "index": "i",
+          "items": [10, 20, 30],
+          "answers": {
+            "iterations": "3",
+            "last": "2 30"
+          }
+        },
+        {
+          "id": "index-names",
+          "list_name": "names",
+          "index": "i",
+          "items": ["Maya", "Zara"],
+          "answers": {
+            "iterations": "2",
+            "last": "1 Zara"
+          }
+        },
+        {
+          "id": "index-temps",
+          "list_name": "temps",
+          "index": "i",
+          "items": [5, 8, 3, 1],
+          "answers": {
+            "iterations": "4",
+            "last": "3 1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "for-range",
+      "title": "Loops: range(stop)",
+      "pattern": "for_range",
+      "blurb": "range(stop) starts at 0 and stops before stop.",
+      "closing": "Run range(start, stop) when you are ready, or run this cell again for a different example.",
+      "prompts": {
+        "iterations": "How many times does this print?",
+        "last": "What is the last number this prints?"
+      },
+      "hints": {
+        "iterations": "range(stop) runs stop times, starting at 0.",
+        "last": "It stops before stop. The last number is one less than stop."
+      },
+      "notes": {
+        "iterations": "The number inside range is how many passes, because counting starts at 0.",
+        "last": "The last number is one less than stop. The stop number itself is not printed."
+      },
+      "fixed": {
+        "meaning": {
+          "prompt": "What does range(stop) count?",
+          "answer": "0 up to, but not including, stop",
+          "decoys": [
+            "1 through stop, including stop",
+            "Only the number stop"
+          ],
+          "hint": "One number inside range means start at 0 and stop before that number.",
+          "note": "Counting starts at 0, so the last number is one less than stop."
+        }
+      },
+      "examples": [
+        {
+          "id": "range-3",
+          "var": "n",
+          "stop": 3,
+          "answers": {
+            "iterations": "3",
+            "last": "2"
+          }
+        },
+        {
+          "id": "range-4",
+          "var": "n",
+          "stop": 4,
+          "answers": {
+            "iterations": "4",
+            "last": "3"
+          }
+        },
+        {
+          "id": "range-5",
+          "var": "i",
+          "stop": 5,
+          "answers": {
+            "iterations": "5",
+            "last": "4"
+          }
+        }
+      ]
+    },
+    {
+      "id": "for-range-start-stop",
+      "title": "Loops: range(start, stop)",
+      "pattern": "for_range_start_stop",
+      "blurb": "range(start, stop) starts at start and stops before stop.",
+      "closing": "Run range with a step when you are ready, or run this cell again for a different example.",
+      "prompts": {
+        "iterations": "How many times does this print?",
+        "first": "What is the first number this prints?",
+        "last": "What is the last number this prints?",
+        "includes_stop": "Does this loop include the stop number?"
+      },
+      "hints": {
+        "iterations": "Count from start up to, but not including, stop.",
+        "first": "The first number inside range is the first value printed.",
+        "last": "The last value is one less than stop.",
+        "includes_stop": "The second number is the fence. The loop stops before it."
+      },
+      "notes": {
+        "iterations": "Subtract start from stop. That is the number of passes.",
+        "first": "range(start, stop) begins at start.",
+        "last": "It prints every whole number from start until it would hit stop.",
+        "includes_stop": "Stop is not one of the printed numbers."
+      },
+      "examples": [
+        {
+          "id": "range-1-to-4",
+          "var": "n",
+          "start": 1,
+          "stop": 4,
+          "answers": {
+            "iterations": "3",
+            "first": "1",
+            "last": "3",
+            "includes_stop": "No. It stops before 4"
+          }
+        },
+        {
+          "id": "range-2-to-6",
+          "var": "n",
+          "start": 2,
+          "stop": 6,
+          "answers": {
+            "iterations": "4",
+            "first": "2",
+            "last": "5",
+            "includes_stop": "No. It stops before 6"
+          }
+        },
+        {
+          "id": "range-0-to-3",
+          "var": "i",
+          "start": 0,
+          "stop": 3,
+          "answers": {
+            "iterations": "3",
+            "first": "0",
+            "last": "2",
+            "includes_stop": "No. It stops before 3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "for-range-step",
+      "title": "Loops: range with a step",
+      "pattern": "for_range_step",
+      "blurb": "The third number inside range is the step, including a step that counts down.",
+      "closing": "Run while when you are ready, or run this cell again for a different example.",
+      "prompts": {
+        "iterations": "How many times does this print?",
+        "last": "What is the last number this prints?",
+        "printed": "What does this print, in order?"
+      },
+      "hints": {
+        "iterations": "Start at the first number, keep adding the step, and stop before the stop number. Count those values.",
+        "last": "The last value is the last one you land on before reaching stop.",
+        "printed": "Write each value the loop variable takes, in order."
+      },
+      "notes": {
+        "iterations": "The step is the gap. A bigger step means fewer passes.",
+        "last": "Stop is a fence, even when the step is bigger than 1 or is negative.",
+        "printed": "Positive step counts up. Negative step counts down."
+      },
+      "fixed": {
+        "step_means": {
+          "prompt": "What does the third number inside range do?",
+          "answer": "It is the step: how much to count by",
+          "decoys": [
+            "It is the last number printed",
+            "It is how many times the loop runs"
+          ],
+          "hint": "range(start, stop, step). The third number is the gap.",
+          "note": "Step 2 skips every other number. Step -1 counts down. Stop is still not printed."
+        }
+      },
+      "examples": [
+        {
+          "id": "step-evens",
+          "var": "n",
+          "start": 0,
+          "stop": 6,
+          "step": 2,
+          "answers": {
+            "iterations": "3",
+            "last": "4",
+            "printed": "0, 2, 4"
+          }
+        },
+        {
+          "id": "step-by-3",
+          "var": "n",
+          "start": 1,
+          "stop": 10,
+          "step": 3,
+          "answers": {
+            "iterations": "3",
+            "last": "7",
+            "printed": "1, 4, 7"
+          }
+        },
+        {
+          "id": "step-down",
+          "var": "n",
+          "start": 5,
+          "stop": 0,
+          "step": -1,
+          "answers": {
+            "iterations": "5",
+            "last": "1",
+            "printed": "5, 4, 3, 2, 1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "while",
+      "title": "Loops: while",
+      "pattern": "while_count",
+      "blurb": "A while loop repeats while its test is true. Something inside must change the test.",
+      "closing": "Run for _ in range when you are ready, or run this cell again for a different example.",
+      "prompts": {
+        "iterations": "How many times does this print?",
+        "last": "What is the last number this prints?",
+        "stops": "When does this while loop stop?"
+      },
+      "hints": {
+        "iterations": "The test is checked before each pass. Count how many times it is still true.",
+        "last": "The last printed number is the last one that still passed the test.",
+        "stops": "Read the test after while. The loop stops when that test is false."
+      },
+      "notes": {
+        "iterations": "Each pass prints the current number, then adds 1.",
+        "last": "Adding 1 moves the variable toward the end of the test.",
+        "stops": "The last line has to change the variable. Without it, the test would stay true."
+      },
+      "examples": [
+        {
+          "id": "while-count-3",
+          "var": "count",
+          "start": 0,
+          "limit": 3,
+          "comparison": "<",
+          "answers": {
+            "iterations": "3",
+            "last": "2",
+            "stops": "When count < 3 is false"
+          }
+        },
+        {
+          "id": "while-until-3",
+          "var": "count",
+          "start": 1,
+          "limit": 3,
+          "comparison": "<=",
+          "answers": {
+            "iterations": "3",
+            "last": "3",
+            "stops": "When count <= 3 is false"
+          }
+        },
+        {
+          "id": "while-n-4",
+          "var": "n",
+          "start": 0,
+          "limit": 4,
+          "comparison": "<",
+          "answers": {
+            "iterations": "4",
+            "last": "3",
+            "stops": "When n < 4 is false"
+          }
+        }
+      ]
+    },
+    {
+      "id": "for-blank",
+      "title": "Loops: for _ in range",
+      "pattern": "for_blank",
+      "blurb": "_ means you want the repeats and you do not need the loop number.",
+      "closing": "Run the += shorthand when you are ready, or run this cell again for a different example.",
+      "prompts": {
+        "iterations": "How many times does this print?",
+        "output": "What does one print show?"
+      },
+      "hints": {
+        "iterations": "The number inside range is how many passes.",
+        "output": "The print is indented, so each pass prints that same text."
+      },
+      "notes": {
+        "iterations": "The loop variable is _, so the number itself is not used.",
+        "output": "Every pass prints the same text. The number of lines is the number inside range."
+      },
+      "fixed": {
+        "meaning": {
+          "prompt": "What does the _ in for _ in range mean?",
+          "answer": "Ignore the number; just repeat",
+          "decoys": [
+            "A variable we are supposed to print",
+            "The loop runs forever"
+          ],
+          "hint": "_ is a name people use when they do not need the value.",
+          "note": "for _ in range(4) means do the indented lines 4 times."
+        }
+      },
+      "examples": [
+        {
+          "id": "blank-go",
+          "times": 4,
+          "message": "go",
+          "answers": {
+            "iterations": "4",
+            "output": "go"
+          }
+        },
+        {
+          "id": "blank-hi",
+          "times": 3,
+          "message": "hi",
+          "answers": {
+            "iterations": "3",
+            "output": "hi"
+          }
+        },
+        {
+          "id": "blank-yes",
+          "times": 2,
+          "message": "yes",
+          "answers": {
+            "iterations": "2",
+            "output": "yes"
+          }
+        }
+      ]
+    },
+    {
+      "id": "plus-equals",
+      "title": "Shorthand: += -= *=",
+      "pattern": "plus_equals",
+      "blurb": "+=, -=, and *= are shorthand. They change the variable and store the result.",
+      "closing": "Run enumerate when you are ready, or run this cell again for a different example.",
+      "prompts": {
+        "same_as": "What is the long form of the shorthand in the loop?",
+        "value": "What is the value of the variable after the loop?",
+        "iterations": "How many times does the loop change the variable?"
+      },
+      "hints": {
+        "same_as": "+= adds and stores. -= subtracts and stores. *= multiplies and stores.",
+        "value": "Start at the first number. Apply the change once per pass.",
+        "iterations": "The number inside range is how many passes."
+      },
+      "notes": {
+        "same_as": "The shorthand and the long form store the same new value.",
+        "value": "Each pass uses the new value, not the original one.",
+        "iterations": "The loop variable n is not the value we are changing."
+      },
+      "examples": [
+        {
+          "id": "plus-total-7",
+          "var": "total",
+          "start": 1,
+          "op": "+=",
+          "amount": 2,
+          "times": 3,
+          "answers": {
+            "same_as": "total = total + 2",
+            "value": "7",
+            "iterations": "3"
+          }
+        },
+        {
+          "id": "plus-total-6",
+          "var": "total",
+          "start": 0,
+          "op": "+=",
+          "amount": 2,
+          "times": 3,
+          "answers": {
+            "same_as": "total = total + 2",
+            "value": "6",
+            "iterations": "3"
+          }
+        },
+        {
+          "id": "minus-points",
+          "var": "points",
+          "start": 10,
+          "op": "-=",
+          "amount": 4,
+          "times": 2,
+          "answers": {
+            "same_as": "points = points - 4",
+            "value": "2",
+            "iterations": "2"
+          }
+        },
+        {
+          "id": "times-bags",
+          "var": "bags",
+          "start": 2,
+          "op": "*=",
+          "amount": 3,
+          "times": 2,
+          "answers": {
+            "same_as": "bags = bags * 3",
+            "value": "18",
+            "iterations": "2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "enumerate",
+      "title": "Loops: enumerate",
+      "pattern": "enumerate",
+      "blurb": "enumerate gives you the index and the item together. Indexes still start at 0.",
+      "closing": "That is the path for now. Run any cell again for a different example.",
+      "prompts": {
+        "iterations": "How many times does the indented line run?",
+        "last": "What is the last line this prints?"
+      },
+      "hints": {
+        "iterations": "One pass per item. Count the items.",
+        "last": "The first number is the index, starting at 0. The second is the item."
+      },
+      "notes": {
+        "iterations": "enumerate walks the list once.",
+        "last": "The last index is one less than the length."
+      },
+      "fixed": {
+        "meaning": {
+          "prompt": "What does enumerate give the loop each pass?",
+          "answer": "The index and the item, together",
+          "decoys": [
+            "Only the item",
+            "Indexes that start at 1"
+          ],
+          "hint": "Two names after for means two values each pass.",
+          "note": "enumerate is the short form of for i in range(len(...)). Indexes still start at 0."
+        }
+      },
+      "examples": [
+        {
+          "id": "enum-scores",
+          "list_name": "scores",
+          "index": "i",
+          "var": "score",
+          "items": [10, 20, 30],
+          "answers": {
+            "iterations": "3",
+            "last": "2 30"
+          }
+        },
+        {
+          "id": "enum-names",
+          "list_name": "names",
+          "index": "i",
+          "var": "name",
+          "items": ["Maya", "Zara"],
+          "answers": {
+            "iterations": "2",
+            "last": "1 Zara"
+          }
+        },
+        {
+          "id": "enum-hops",
+          "list_name": "hops",
+          "index": "i",
+          "var": "hop",
+          "items": [1, 1, 1, 1],
+          "answers": {
+            "iterations": "4",
+            "last": "3 1"
+          }
+        }
+      ]
+    }
+  ]
+}

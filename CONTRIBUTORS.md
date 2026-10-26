@@ -1,9 +1,7 @@
-# Contributors — Advanced+ 2026
+# Contributors
 
-Add your name on its own line at the bottom of the **Names** list.
+Do not add your name in this file.
 
-Start the line with a dash and a space. Use your first name and last initial, or your GitHub username. Do not add an email address, phone number, school name, or home address. Do not delete or edit anyone else's line.
+Add a new file in the `names` folder instead. One girl, one file. That way the class is not all editing the same list.
 
-## Names
-
-- J-Ashby
+See STUDENT-GUIDE.md.
